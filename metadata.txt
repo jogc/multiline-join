@@ -8,4 +8,5 @@ about=Vertices need to be at the exact same position to be considered
  overlapping. Parts with ambiguities will be removed.
 tags=vector
 version=0.0.1
-
+tracker=https://github.com/jogc/multiline-join/issues
+repository=https://github.com/jogc/multiline-join
