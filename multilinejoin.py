@@ -145,20 +145,20 @@ class Linepart:
 		print "----------------------------------"
 		
 
-class Mvj:
+class MultilinejoinBatch:
 	def __init__(self, iface):
 		self.iface=iface
 
 
 	def initGui(self):
-		self.action = QAction("Multiline Vertex Join", self.iface.mainWindow())
-		self.action.setObjectName("multiline-vertex-join")
+		self.action = QAction("Multiline Join", self.iface.mainWindow())
+		self.action.setObjectName("multiline-join")
 		QObject.connect(self.action, SIGNAL("triggered()"), self.run)
-		self.iface.addPluginToVectorMenu("&Multiline Vertex Join", self.action)
+		self.iface.addPluginToVectorMenu("&Multiline Join", self.action)
 
 
 	def unload(self):
-		self.iface.removePluginVectorMenu("&Multiline Vertex Join", self.action)
+		self.iface.removePluginVectorMenu("&Multiline Join", self.action)
 
 
 	def run(self):
@@ -248,7 +248,7 @@ class Mvj:
 					if len(parts) != len(new_parts):
 						if not done_anything:
 							done_anything=True
-							layer.beginEditCommand("Multiline Vertex Join")
+							layer.beginEditCommand("Multiline Join")
 
 						g = QgsGeometry.fromMultiPolyline(new_parts)
 						layer.changeGeometry(feature.id(), g)
@@ -263,6 +263,6 @@ class Mvj:
 				layer.endEditCommand()
 				layer.triggerRepaint()
 
-				self.iface.messageBar().pushMessage("Multiline Vertex Join",
+				self.iface.messageBar().pushMessage("Multiline Join",
 					str(parts_included_total) + "/" + str(parts_before_total) + \
 					" parts -> " + str(parts_after_total) + " parts", level=QgsMessageBar.INFO)
