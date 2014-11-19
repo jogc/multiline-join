@@ -1,0 +1,11 @@
+[general]
+name=Multiline Vertex Join
+email=jon.orebro@gmail.com
+author=Jon Forsberg
+qgisMinimumVersion=2.4
+description=Merge the parts of multipolylines by fusing overlapping end vertices together
+about=Vertices need to be at the exact same position to be considered
+ overlapping. Parts with ambiguities will be removed.
+tags=vector
+version=0.0.1
+
