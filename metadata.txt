@@ -9,6 +9,7 @@ about=Vertices need to be at the exact same position to be considered
 version=0.0.1
 tracker=https://github.com/jogc/multiline-join/issues
 repository=https://github.com/jogc/multiline-join
+homepage=https://github.com/jogc/multiline-join
 category=Vector
 tags=vector
 
